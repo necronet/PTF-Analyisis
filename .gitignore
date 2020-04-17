@@ -1,2 +1,6 @@
+.RData
+.RHistory
+*.csv
 .DS_Store
 data/*
+.Rproj.user
