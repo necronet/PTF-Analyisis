@@ -63,8 +63,8 @@ analytics_data_join <- GA_data %>% mutate(ContentId = gsub(REMOVE_CHARACTERS, ''
 
 
 company_pageviews <- analytics_data_join %>% group_by(Section) %>% 
-          summarise(TotalUniquePageViews = sum(`Unique Pageviews`), AvgBR = mean(`Bounce Rate`)) %>%
-          arrange(desc(TotalUniquePageViews)) 
+          summarise(TotalPageViews = sum(Pageviews), AvgBR = mean(`Bounce Rate`)) %>%
+          arrange(desc(TotalPageViews)) 
 
 
 
